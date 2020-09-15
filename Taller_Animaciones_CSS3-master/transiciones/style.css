@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Transción con propiedades por separado. El estado inicial es donde se definen las propiedades con sus valores iniciales
+y los propios valores de la transición */
+h1 {
+  color: white;
+  background-color: black;
+  text-align: center;
+  transition: all 3s ease-in;
+  /* transition-duration: 3s;
+  transition-timing-function: ease-in;
+  transition-property: color, background-color; */
+}
+
+h1:hover {
+  color: red;
+  background-color: white;
+}
+
+/* Transición con todo en una sola propiedad */
+.caja {
+  background-color: green;
+  border-radius: 0%;
+  height: 200px;
+  margin: 30px auto;
+  /* transition: all 1s linear; */
+  transition-property: all;
+  transition-duration: 1s;
+  /* transition-timing-function: ease-in-out; */
+  width: 200px;
+}
+
+.caja:hover {
+  background-color: yellow;
+  border-radius: 50%;
+}
