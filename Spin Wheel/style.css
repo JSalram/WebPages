@@ -1,0 +1,50 @@
+body {
+    background-color: coral;
+    margin-top: 20px;
+}
+
+#title {
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: inline;
+    text-align: center;
+    color: darkblue;
+    background-color: lightblue;
+    border: 2px outset lightblue;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/*
+#spinner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px black solid;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+*/
+
+#dios {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 50px;
+    /* text-decoration: underline; */
+}
+
+#boton {
+    margin-top: 1em;
+    text-align: center;
+}
+
+#boton button {
+    font-size: 30px;
+    cursor: pointer;
+}
