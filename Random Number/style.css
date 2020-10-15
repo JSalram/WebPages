@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: lightcyan;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+    text-align: center;
+    background-color: darkslategrey;
+    color: white;
+}
+
+img[src="random.png"] {
+    margin-left: 10px;
+    height: 4%;
+    width: 4%;
+    float: left;
+}
+img[src="info.png"] {
+    height: 5%;
+    width: 5%;
+    float: right;
+}
+
+#botonera {
+    margin: 50px 400px 0px 400px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) fit-content(20%);
+    
+}
+
+button {
+    margin: 3px;
+    font-size: x-large;
+    height: 80px;
+    width: 80px;
+    outline: none;
+    border: solid black 2px;
+    border-radius: 20%;
+    transition: all .25s ease-in-out;
+}
+
+button:hover {
+    background-color: lightblue;
+}
