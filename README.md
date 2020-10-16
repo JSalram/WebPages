@@ -1,9 +1,11 @@
 # [WebPages](https://jsalram.github.io/WebPages/)
 
+## HTML, CSS, JS
+
 En este repositorio tengo todo mi progreso en HTML, CSS y JavaScript, desde proyectos de prueba utilizados para el estudio como proyectos funcionales que siguen en desarrollo,
 además de los nuevos proyectos que vaya realizando en un futuro.
 
-Proyectos:
+Proyectos actuales:
 - **[Randomizer](Randomizer/random.html)**  → Generador aleatorio para 2 elegidos.
 - **[Google](HTML-CSS/Google/index.html)**  → Réplica de Google.
 - **[SpinWheel](SpinWheel/index.html)**     → Ruleta de la fortuna. *STAND-BY*
