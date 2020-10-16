@@ -14,17 +14,19 @@ h1 {
     color: white;
 }
 
-img[src="random.png"] {
+img[src="img/random.png"] {
     margin-left: 10px;
     margin-top: 9px;
     height: 4%;
     width: 4%;
     float: left;
+    cursor: pointer;
 }
-img[src="info.png"] {
+img[src="img/info.png"] {
     height: 5%;
     width: 5%;
     float: right;
+    cursor: pointer;
 }
 
 #restantes {
