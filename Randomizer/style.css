@@ -14,23 +14,10 @@ h1 {
     color: white;
 }
 
-img[src="img/random.png"] {
-    margin-left: 10px;
-    margin-top: 9px;
-    height: 4%;
-    width: 4%;
-    float: left;
-    cursor: pointer;
-}
-img[src="img/info.png"] {
-    height: 5%;
-    width: 5%;
-    float: right;
-    cursor: pointer;
-}
+/* ======================================================== */
 
 #restantes {
-    margin: 0px 400px 0px 400px;
+    margin: 0% 25% 0% 25%;
     font-size: 33px;
     padding: 10px;
     text-align: center;
@@ -39,13 +26,12 @@ img[src="img/info.png"] {
     border-bottom-right-radius: 2%;
     background-color: rgb(80, 103, 126);
     color: white;
-
 }
 
 #botonera {
-    margin: 25px 400px 0px 400px;
+    margin: 2% 25% 0% 25%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr) fit-content(20%);
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     border: 3px darkslategrey solid;
     border-bottom: none;
     border-top-left-radius: 2%;
@@ -67,4 +53,21 @@ button {
 
 button:hover {
     background-color: lightblue;
+}
+
+/* ======================================================== */
+
+img[src="img/random.png"] {
+    margin-left: 10px;
+    margin-top: 9px;
+    height: 4%;
+    width: 4%;
+    float: left;
+    cursor: pointer;
+}
+img[src="img/info.png"] {
+    height: 5%;
+    width: 5%;
+    float: right;
+    cursor: pointer;
 }
