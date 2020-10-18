@@ -6,6 +6,7 @@ En este repositorio tengo todo mi progreso en HTML, CSS y JavaScript, desde proy
 además de los nuevos proyectos que vaya realizando en un futuro.
 
 Proyectos actuales:
+- **[Ahorcado](Ahorcado/index.html)**       → Juego del ahorcado.
 - **[Randomizer](Randomizer/random.html)**  → Generador aleatorio para 2 elegidos.
 - **[Google](HTML-CSS/Google/index.html)**  → Réplica de Google.
 - **[SpinWheel](SpinWheel/index.html)**     → Ruleta de la fortuna. *STAND-BY*
