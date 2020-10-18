@@ -50,11 +50,20 @@ function randomN()
     random(nums[rand]);
 }
 
+function scale()
+{
+    // if (max < 20)
+    // {
+    //     botonera.style.gridTemplateColumns = "repeat(auto-fill, minmax(120px, 1fr))";
+    // }
+}
+
 window.onload = function()
 {
+    document.getElementById("restantes").innerHTML = "Intentos restantes: " + (max+1);
     var botonera = document.getElementById("botonera");
     var botones = ""
-        
+
     for (var i = 0; i <= max; i++)
     {
         botones += "<button onclick='random(" + i + ")'>" + (i+1) + "</button>"

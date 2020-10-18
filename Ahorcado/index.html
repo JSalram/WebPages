@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>AHORCADO</h1>
+    <img src="img/0.png" alt="ahorcado">
+
+    <p id="adivina"></p>
+    <div id="input">
+        <input type="text" maxlength="1" autofocus onkeyup="this.value = this.value.toUpperCase();">
+        <button onclick="jugar()">Aceptar</button>
+    </div>
+
+    <p id="pista"></p>
+</body>
+</html>
