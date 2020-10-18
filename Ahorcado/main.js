@@ -15,6 +15,7 @@ var k = 0;
 function jugar()
 {
     let letra = document.getElementsByTagName("input")[0].value;
+    letra = letra.toUpperCase();
     document.getElementsByTagName("input")[0].value = "";
     document.getElementsByTagName("input")[0].focus();
 
