@@ -11,15 +11,26 @@
     <h1>Randomizer</h1>
 
     <div id="centro">
-        <div id="inputs">
-            <p>Elige los números seleccionados:</p>
-            <label for="n1">Número 1:</label>
-            <input type="number" id="n1">
-            <br>
-            <label for="n2">Número 2:</label>
-            <input type="number" id="n2">
-            <br>
-            <button onclick="selRandoms()">Seleccionar</button>
+        <div id="left">
+            <div id="inputs">
+                <p>Elige los números seleccionados:</p>
+                <label for="n1">Número 1:</label>
+                <input type="number" id="n1">
+                <br>
+                <label for="n2">Número 2:</label>
+                <input type="number" id="n2">
+                <br>
+                <button onclick="selRandoms()">Seleccionar</button>
+            </div>
+            <div id="cells">
+                <p>Elige el número de celdas:</p>
+                <div id="celdas">
+                    <button onclick="celdas(14)">15</button>
+                    <button onclick="celdas(19)">20</button>
+                    <button onclick="celdas(24)">25</button>
+                    <button onclick="celdas(29)">30</button>
+                </div>
+            </div>
         </div>
         <div id="botonera"></div>
     </div>

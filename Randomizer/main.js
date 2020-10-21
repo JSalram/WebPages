@@ -1,13 +1,9 @@
 var nums = [];
-var max = 23;
+var max;
 var aciertos = [];
 
-var randNum1 = Math.round(Math.random() * max);
-var randNum2 = Math.round(Math.random() * max);
-while (randNum1 == randNum2)
-{
-    randNum2 = Math.round(Math.random() * max);
-}
+var randNum1;
+var randNum2;
 
 function random(i)
 {
@@ -78,18 +74,23 @@ function selRandoms()
     }
 }
 
-function scale()
+function celdas(n)
 {
-    // if (max < 20)
-    // {
-    //     botonera.style.gridTemplateColumns = "repeat(auto-fill, minmax(120px, 1fr))";
-    // }
-}
+    max = n;
+    randNum1 = Math.round(Math.random() * max);
+    randNum2 = Math.round(Math.random() * max);
+    while (randNum1 == randNum2)
+    {
+        randNum2 = Math.round(Math.random() * max);
+    }
+    nums = [];
+    aciertos = [];
 
-window.onload = function()
-{
-    document.getElementById("restantes").innerHTML = "Intentos restantes: " + (max+1);
     var botonera = document.getElementById("botonera");
+    var restantes = document.getElementById("restantes");
+    escala(n);
+
+    restantes.innerHTML = "Intentos restantes: " + (max+1);
     var botones = ""
 
     for (var i = 0; i <= max; i++)
@@ -99,4 +100,27 @@ window.onload = function()
     }
 
     botonera.innerHTML = botones;
+}
+
+function escala(n)
+{
+    var botonera = document.getElementById("botonera");
+    var restantes = document.getElementById("restantes");
+    if (n > 25)
+    {
+        botonera.style.gridTemplateColumns = "repeat(6, 1fr)";
+        botonera.style.margin = "2% 15% 0% 35%";
+        restantes.style.margin = "0% 15% 0% 35%";
+    }
+    else
+    {
+        botonera.style.gridTemplateColumns = "repeat(5, 1fr)";
+        botonera.style.margin = "2% 18% 0% 38%";
+        restantes.style.margin = "0% 18% 0% 38%";
+    }
+}
+
+window.onload = function()
+{
+    celdas(24);
 }
