@@ -120,13 +120,13 @@ function escala(n)
     {
         botonera.style.gridTemplateColumns = "repeat(6, 1fr)";
         botonera.style.margin = "2% 15% 0% 35%";
-        restantes.style.margin = "0% 15% 0% 35%";
+        restantes.style.margin = "0% 15% 1% 35%";
     }
     else
     {
         botonera.style.gridTemplateColumns = "repeat(5, 1fr)";
         botonera.style.margin = "2% 18% 0% 38%";
-        restantes.style.margin = "0% 18% 0% 38%";
+        restantes.style.margin = "0% 18% 1% 38%";
     }
 }
 
