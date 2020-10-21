@@ -63,7 +63,8 @@ function selRandoms()
     let n1value = parseInt(n1.value) - 1;
     let n2value = parseInt(n2.value) - 1;
 
-    if (n1value >= 0 && n2value >= 0 && n1value != n2value)
+    if (n1value >= 0 && n2value >= 0 && n1value != n2value
+        && n1value < max+1 && n2value < max+1)
     {
         randNum1 = n1value;
         randNum2 = n2value;
