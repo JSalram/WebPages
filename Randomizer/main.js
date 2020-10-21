@@ -23,7 +23,6 @@ function random(i)
         {
             boton.style.backgroundColor = "black";
             aciertos[aciertos.length] = valor;
-
         }
         else
         {
@@ -72,6 +71,10 @@ function selRandoms()
         n1.style.backgroundColor = "black";
         n2.style.backgroundColor = "black";
     }
+    else
+    {
+        alert("Los números introducidos no son válidos.")
+    }
 }
 
 function celdas(n)
@@ -86,6 +89,12 @@ function celdas(n)
     nums = [];
     aciertos = [];
 
+    let n1 = document.getElementById("n1");
+    let n2 = document.getElementById("n2");
+
+    n1.max = max+1;
+    n2.max = max+1;
+
     var botonera = document.getElementById("botonera");
     var restantes = document.getElementById("restantes");
     escala(n);
@@ -95,7 +104,7 @@ function celdas(n)
 
     for (var i = 0; i <= max; i++)
     {
-        botones += "<button onclick='random(" + i + ")'>" + (i+1) + "</button>"
+        botones += "<button onclick='random(" + i + ")' style='justify-self: center'>" + (i+1) + "</button>"
         nums[nums.length] = i;
     }
 

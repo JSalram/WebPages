@@ -10,15 +10,17 @@
 <body>
     <h1>Randomizer</h1>
 
+    <img src="img/info.png" alt="info" onclick="info()" width="1024" height="1024">
+    
     <div id="centro">
         <div id="left">
             <div id="inputs">
                 <p>Elige los números seleccionados:</p>
                 <label for="n1">Número 1:</label>
-                <input type="number" id="n1">
+                <input type="number" id="n1" min="1">
                 <br>
                 <label for="n2">Número 2:</label>
-                <input type="number" id="n2">
+                <input type="number" id="n2" min="1">
                 <br>
                 <button onclick="selRandoms()">Seleccionar</button>
             </div>
@@ -31,12 +33,10 @@
                     <button onclick="celdas(29)">30</button>
                 </div>
             </div>
+            <img src="img/random.png" alt="random" onclick="randomN()" width="980" height="876">
         </div>
         <div id="botonera"></div>
     </div>
     <p id="restantes"></p>
-
-    <img src="img/random.png" alt="random" onclick="randomN()" width="980" height="876">
-    <img src="img/info.png" alt="info" onclick="info()" width="1024" height="1024">
 </body>
 </html>
