@@ -1,6 +1,6 @@
 var nums = [];
 var max = 23;
-var aciertos = 0;
+var aciertos = [];
 
 var randNum1 = Math.round(Math.random() * max);
 var randNum2 = Math.round(Math.random() * max);
@@ -11,16 +11,23 @@ while (randNum1 == randNum2)
 
 function random(i)
 {
-    let restantes = document.getElementById("restantes");
-    let botones = document.getElementById("botonera").childNodes;
-    let boton = botones[i];
+    var restantes = document.getElementById("restantes");
+    var botones = document.getElementById("botonera").childNodes;
+    var boton = botones[i];
+    var valor = boton.innerHTML-1;
 
-    if (aciertos < 2)
+    if (aciertos.length < 2)
     {
-        if (boton.innerHTML-1 == randNum1 || boton.innerHTML-1 == randNum2)
+        if (valor == randNum1 && !aciertos.includes(valor))
         {
             boton.style.backgroundColor = "black";
-            aciertos += 1;
+            aciertos[aciertos.length] = valor;
+        }
+        else if (valor == randNum2 && !aciertos.includes(valor))
+        {
+            boton.style.backgroundColor = "black";
+            aciertos[aciertos.length] = valor;
+
         }
         else
         {
@@ -28,10 +35,13 @@ function random(i)
         }
         
         boton.style.color = "white";    
-        nums.splice(nums.indexOf(i), 1);
+        if (nums.includes(valor))
+        {
+            nums.splice(nums.indexOf(i), 1);
+        }
         restantes.innerHTML = "Intentos restantes: " + nums.length;
     }
-    if (aciertos == 2)
+    if (aciertos.length == 2)
     {
         restantes.innerHTML = "FINISHED!"
     }
