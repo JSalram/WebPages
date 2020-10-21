@@ -11,9 +11,9 @@ while (randNum1 == randNum2)
 
 function random(i)
 {
-    var restantes = document.getElementById("restantes");
-    var botones = document.getElementsByTagName("button");
-    var boton = botones[i];
+    let restantes = document.getElementById("restantes");
+    let botones = document.getElementById("botonera").childNodes;
+    let boton = botones[i];
 
     if (aciertos < 2)
     {
@@ -40,14 +40,32 @@ function random(i)
 function info()
 {
     alert("Selecciona números hasta encontrar los dos elegidos.\n\
+Los números elegidos por defecto son aleatorios.\n\
 Haz click en la imagen de 'random' para marcar un número al azar.");
 }
 
 function randomN()
 {
-    var rand = Math.round(Math.random() * (nums.length-1));
+    let rand = Math.round(Math.random() * (nums.length-1));
 
     random(nums[rand]);
+}
+
+function selRandoms()
+{
+    let n1 = document.getElementById("n1");
+    let n2 = document.getElementById("n2");
+    let n1value = parseInt(n1.value) - 1;
+    let n2value = parseInt(n2.value) - 1;
+
+    if (n1value >= 0 && n2value >= 0 && n1value != n2value)
+    {
+        randNum1 = n1value;
+        randNum2 = n2value;
+        alert("Los números elegidos han sido modificados.")
+        n1.style.backgroundColor = "black";
+        n2.style.backgroundColor = "black";
+    }
 }
 
 function scale()

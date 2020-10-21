@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+    border: 3px black dotted;
+    padding: 5px;
+}
+
+table {
+    margin: auto;
+    border: 1px black solid;
+}
+
+button {
+    font-family: monospace;
+    font-size: 30px;
+    width: 50px;
+    background-color: white;
+}
+
+button:hover{
+    background-color: lightgray;
+}
