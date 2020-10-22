@@ -63,18 +63,25 @@ function selRandoms()
     let n1value = parseInt(n1.value) - 1;
     let n2value = parseInt(n2.value) - 1;
 
-    if (n1value >= 0 && n2value >= 0 && n1value != n2value
-        && n1value < max+1 && n2value < max+1)
+    if (nums.length > max)
     {
-        randNum1 = n1value;
-        randNum2 = n2value;
-        alert("Los números elegidos han sido modificados.")
-        n1.style.backgroundColor = "black";
-        n2.style.backgroundColor = "black";
+        if (n1value >= 0 && n2value >= 0 && n1value != n2value
+            && n1value < max+1 && n2value < max+1)
+        {
+            randNum1 = n1value;
+            randNum2 = n2value;
+            alert("Los números elegidos han sido modificados.")
+            n1.style.backgroundColor = "black";
+            n2.style.backgroundColor = "black";
+        }
+        else
+        {
+            alert("Los números introducidos no son válidos.")
+        }
     }
     else
     {
-        alert("Los números introducidos no son válidos.")
+        alert("No se puede modificar una partida ya está empezada.")
     }
 }
 
