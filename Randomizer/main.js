@@ -93,7 +93,11 @@ function celdas(n)
     let n1 = document.getElementById("n1");
     let n2 = document.getElementById("n2");
 
+    n1.style.backgroundColor = "white";
+    n1.value = "";
     n1.max = max+1;
+    n2.style.backgroundColor = "white";
+    n2.value = "";
     n2.max = max+1;
 
     var botonera = document.getElementById("botonera");
