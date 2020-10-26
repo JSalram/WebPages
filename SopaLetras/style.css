@@ -5,7 +5,7 @@ body {
 
 h1 {
     text-align: center;
-    margin: 2vmin 30vmin 7vmin 30vmin;
+    margin: 2vmin 25vmin 7vmin 25vmin;
     background-color: rgb(47, 47, 116);
     color: white;
     padding: 3vmin;
@@ -42,5 +42,7 @@ p {
 }
 
 @media only screen and (max-width: 800px) {
-    button {width: 20vmin;}
+    h1 {font-size: 8vmin; margin-left: 20vmin; margin-right: 20vmin;}
+    button {font-size: 10vmin; height: 20vmin;}
+    p {font-size: 7vmin;}
 }

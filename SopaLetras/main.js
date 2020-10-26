@@ -11,14 +11,13 @@ let palabras = [{pal: "SOL", pos: [0, 1, 2]},
                 {pal: "GATOS", pos: [3, 8, 13, 18, 23]},
                 {pal: "SUR", pos: [11, 16, 21]}];
 
-let palActual = null;
-let comenzado = false;
+var palActual = null;
 let pos = 0;
 
 window.onload = function()
 {
     let tabla = document.getElementById("tabla");
-    var botones = "";
+    let botones = "";
     let k = 0;
 
     for (let i = 0; i < 5; i++)
@@ -40,7 +39,7 @@ window.onload = function()
 
 function jugar(k)
 {
-    if (!comenzado)
+    if (pos == 0)
     {
         comenzar(k);
     }
@@ -65,7 +64,6 @@ function comenzar(k)
             buttons[k].style.backgroundColor = "gray";
 
             palActual = palabras[i];
-            comenzado = true;
             pos++;
             break;
         }
@@ -86,9 +84,8 @@ function continuar(k)
                 buttons[palActual["pos"][pos]].style.backgroundColor = "green";
             }
 
-            palabras.splice(palActual, 1);
+            palabras.splice(palabras.indexOf(palActual), 1);
             palActual = null;
-            comenzado = false;
 
             document.getElementById("win").innerHTML = "Palabras encontradas: " + (3 - palabras.length) + " / 3";
         }
@@ -100,5 +97,6 @@ function continuar(k)
             pos--;
             buttons[palActual["pos"][pos]].style.backgroundColor = "white";
         }
+        palActual = null;
     }
 }
