@@ -1,45 +1,25 @@
-var sopa = [
-    ["S", "O", "L", "G", "M"],
-    ["F", "N", "W", "A", "Q"],
-    ["V", "S", "J", "T", "G"],
-    ["H", "U", "D", "O", "V"],
-    ["E", "R", "U", "S", "B"],
+let sopa = [
+    "S", "O", "L", "G", "M",
+    "F", "N", "W", "A", "Q",
+    "V", "S", "J", "T", "G",
+    "H", "U", "D", "O", "V",
+    "E", "R", "U", "S", "B",
 ]
+let buttons;
 
-var palabras = ["SOL", "GATOS", "SUR"]
-var encontradas = [false, false, false];
-var letra = 0;
-var palabra = 0;
+let palabras = [{pal: "SOL", pos: [0, 1, 2]},
+                {pal: "GATOS", pos: [3, 8, 13, 18, 23]},
+                {pal: "SUR", pos: [11, 16, 21]}];
 
-function comprobar(i, j)
-{
-    let boton = document.getElementById(i + "," + j);
-
-    for (let k = 0; k < palabras.length; k++)
-    {
-        if (!encontradas[k])
-        {
-            let p = palabras[k];
-            if (sopa[i][j] == p[letra])
-            {
-                boton.style.backgroundColor = "gray";
-                letra++;
-
-                if (letra == p.length)
-                {
-                    letra = 0;
-                    encontradas[k] = true;
-                }
-                break;
-            }
-        }
-    }
-}
+let palActual = null;
+let comenzado = false;
+let pos = 0;
 
 window.onload = function()
 {
     let tabla = document.getElementById("tabla");
-    let botones = "";
+    var botones = "";
+    let k = 0;
 
     for (let i = 0; i < 5; i++)
     {
@@ -47,12 +27,78 @@ window.onload = function()
 
         for (let j = 0; j < 5; j++)
         {
-            botones += "<td><button id='" + i + "," + j + "' onclick=" + 
-            "'comprobar(" + i + ", " + j + ")'>" + sopa[i][j] + "</button></td>"
+            botones += "<td><button onclick='jugar("+k+")'>" + sopa[k] + "</button></td>"
+            k++;
         }
 
         botones += "</td>"
     }
 
     tabla.innerHTML = botones;
+    buttons = document.getElementsByTagName("button");
+}
+
+function jugar(k)
+{
+    if (!comenzado)
+    {
+        comenzar(k);
+    }
+    else
+    {
+        continuar(k);
+    }
+
+    if (palabras.length == 0)  // Si ha completado la sopa
+    {
+        document.getElementById("win").innerHTML = "<b>¡ENHORABUENA!</b>";
+    }
+}
+
+function comenzar(k)
+{    
+    for (let i = 0; i < palabras.length; i++)
+    {
+        let primero = palabras[i]["pos"][0];
+        if (k == primero)
+        {
+            buttons[k].style.backgroundColor = "gray";
+
+            palActual = palabras[i];
+            comenzado = true;
+            pos++;
+            break;
+        }
+    }
+}
+
+function continuar(k)
+{
+    if (k == palActual["pos"][pos])  // Si la letra siguiente es correcta
+    {
+        buttons[k].style.backgroundColor = "gray";
+        pos++;
+        if (pos >= palActual["pos"].length)  // Si ha terminado la palabra
+        {
+            while (pos > 0)
+            {
+                pos--;
+                buttons[palActual["pos"][pos]].style.backgroundColor = "green";
+            }
+
+            palabras.splice(palActual, 1);
+            palActual = null;
+            comenzado = false;
+
+            document.getElementById("win").innerHTML = "Palabras encontradas: " + (3 - palabras.length) + " / 3";
+        }
+    }
+    else  // Si escoge una letra errónea
+    {
+        while (pos > 0)
+        {
+            pos--;
+            buttons[palActual["pos"][pos]].style.backgroundColor = "white";
+        }
+    }
 }

@@ -1,21 +1,46 @@
+body {
+    margin: 0;
+    background-color: rgb(225, 237, 241);
+}
+
 h1 {
     text-align: center;
-    border: 3px black dotted;
-    padding: 5px;
+    margin: 2vmin 30vmin 7vmin 30vmin;
+    background-color: rgb(47, 47, 116);
+    color: white;
+    padding: 3vmin;
+    font-size: 6vmin;
+    border-radius: 20vmin;
 }
 
 table {
     margin: auto;
-    border: 1px black solid;
+    border: 1vmin black solid;
+    border-collapse: collapse;
+    border-style: solid;
+}
+
+tr, td {
+    padding: 0;
+    border-style: solid;
 }
 
 button {
     font-family: monospace;
-    font-size: 30px;
-    width: 50px;
+    font-size: 8vmin;
+    width: 13vmin;
     background-color: white;
 }
 
 button:hover{
     background-color: lightgray;
+}
+
+p {
+    text-align: center;
+    font-size: 6vmin;
+}
+
+@media only screen and (max-width: 800px) {
+    button {width: 20vmin;}
 }
