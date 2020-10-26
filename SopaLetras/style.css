@@ -5,11 +5,11 @@ body {
 
 h1 {
     text-align: center;
-    margin: 2vmin 25vmin 7vmin 25vmin;
+    margin: 2vmin 40vmin 7vmin 40vmin;
     background-color: rgb(47, 47, 116);
     color: white;
-    padding: 3vmin;
-    font-size: 6vmin;
+    padding: 2vmin;
+    font-size: 5vmin;
     border-radius: 20vmin;
 }
 
@@ -22,7 +22,7 @@ table {
 
 tr, td {
     padding: 0;
-    border-style: solid;
+    border: .5vmin black solid;
 }
 
 button {
@@ -30,6 +30,8 @@ button {
     font-size: 8vmin;
     width: 13vmin;
     background-color: white;
+    border: none;
+    outline: none;
 }
 
 button:hover{
@@ -38,11 +40,11 @@ button:hover{
 
 p {
     text-align: center;
-    font-size: 6vmin;
+    font-size: 5vmin;
 }
 
 @media only screen and (max-width: 800px) {
     h1 {font-size: 8vmin; margin-left: 20vmin; margin-right: 20vmin;}
-    button {font-size: 10vmin; height: 20vmin;}
+    button {font-size: 10vmin; height: 20vmin; width: 18vmin;}
     p {font-size: 7vmin;}
 }
