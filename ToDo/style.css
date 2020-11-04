@@ -1,0 +1,15 @@
+li {
+    cursor: pointer;
+}
+li:hover li:active {
+    background-color: rgb(245, 200, 200);
+}
+
+@media (min-width: 800px) {
+    .jumbotron {
+        display: block;
+        float: left;
+        height: 94vmin;
+        margin-right: 10px;
+    }
+}
