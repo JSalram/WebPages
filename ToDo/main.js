@@ -52,7 +52,7 @@ function printTasks()
     for (let i = tasks.length-1; i >= 0; i--)
     {
         let li = document.createElement("li");
-        li.className = "list-group-item text-muted";
+        li.className = "list-group-item text-muted col-sm-6 col-lg-12 border";
         li.textContent = tasks[i];
         li.addEventListener("click", function()
         {
@@ -66,5 +66,5 @@ function printTasks()
         list.appendChild(li);
         localStorage.setItem(i, tasks[i]);
     }
-    list.firstChild.className = "list-group-item active list-inline";
+    list.firstChild.className = "list-group-item active list-inline col-sm-6 col-lg-12 border";
 }
