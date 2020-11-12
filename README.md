@@ -6,7 +6,8 @@ En este repositorio tengo todo mi progreso en HTML, CSS y JavaScript, desde proy
 además de los nuevos proyectos que vaya realizando en un futuro.
 
 Proyectos actuales:
-- **[ToDo](https://jsalram.github.io/WebPages/ToDo/index.html)**               → Lista de tareas (con BootStrap).
+- **[Calculadora](https://jsalram.github.io/WebPages/Calculadora/index.html)** → Calculadora simple. *EN DESARROLLO*
+- **[ToDo](https://jsalram.github.io/WebPages/ToDo/index.html)**               → Lista de tareas (con BootStrap). *EN DESARROLLO*
 - **[SopaLetras](https://jsalram.github.io/WebPages/SopaLetras/index.html)**   → Sopa de letras.
 - **[Ahorcado](https://jsalram.github.io/WebPages/Ahorcado/index.html)**       → Juego del ahorcado.
 - **[Randomizer](https://jsalram.github.io/WebPages/Randomizer/random.html)**  → Generador aleatorio para 2 elegidos.
