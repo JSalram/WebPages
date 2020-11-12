@@ -1,10 +1,12 @@
 let tasks = [];
+// let done = [];
 
 function storage()
 {
     for (let i = 0; i < localStorage.length; i++)
     {
         tasks.push(localStorage.getItem(i));
+        // done.push(localStorage.getItem(i + "d"));
     }
     printTasks();
 }
@@ -12,6 +14,7 @@ function storage()
 function clearList()
 {
     tasks = [];
+    // done = [];
     localStorage.clear();
     printTasks();
 }
@@ -38,6 +41,7 @@ function addTask()
     if (task.value != "" && !tasks.includes(task.value))
     {
         tasks.push(task.value);
+        // done.push(false);
         printTasks();
     }
     task.value = "";
@@ -52,9 +56,18 @@ function printTasks()
     for (let i = tasks.length-1; i >= 0; i--)
     {
         let li = document.createElement("li");
-        li.className = "list-group-item text-muted col-sm-6 col-lg-12 border";
+        let x = document.createElement("button");
+        li.className = "list-group-item col-sm-6 col-lg-12 border";
+        x.className = "btn btn-outline-dark float-right"
+        if (i % 2 == 0)
+        {
+            li.className = "list-group-item col-sm-6 col-lg-12 border bg-secondary text-white";
+            x.className = "btn btn-outline-light float-right"
+        }
+        // if (done[i]) {li.className = "list-group-item col-sm-6 col-lg-12 border bg-success text-white";}
         li.textContent = tasks[i];
-        li.addEventListener("click", function()
+        x.textContent = "X";
+        x.addEventListener("click", function()
         {
             let list = document.getElementById("list");
             list.removeChild(list.childNodes[0]);
@@ -62,9 +75,15 @@ function printTasks()
             localStorage.clear();
             printTasks();
         });
+        li.appendChild(x);
+        li.addEventListener("click", function()
+        {
+            li.className = "list-group-item col-sm-6 col-lg-12 border bg-success text-white";
+            // done[i] = true;
+        })
 
         list.appendChild(li);
         localStorage.setItem(i, tasks[i]);
+        // localStorage.setItem(i + "d", done[i]);
     }
-    list.firstChild.className = "list-group-item active list-inline col-sm-6 col-lg-12 border";
 }
