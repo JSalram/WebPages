@@ -1,0 +1,84 @@
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+div.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    background-image: linear-gradient(rgb(15, 15, 15, .9), rgb(0, 0, 0, .9));
+}
+
+form {
+    display: grid;
+    width: 80vmin;
+    height: 90vmin;
+    padding: 8px;
+    border-radius: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+input[type=text] {  /*TODO: CAMBIAR FONT-FAMILY */
+    color: white;
+    caret-color: transparent;
+    font-size: 3em;
+    text-align: right;
+    padding-right: .5em;
+    -webkit-appearance: none;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    outline: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid grey;
+    background-color: black;
+}
+input[type=text]::-webkit-outer-spin-button,
+input[type=text]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ============================================= */
+
+input[type=button] {
+    font-size: 3em;
+    outline: none;
+    border: 1px solid grey;
+    background-color: white;
+}
+input[type=button]:hover {
+    background-color: rgb(255, 255, 255, .25);
+}
+input[type=button]:active {
+    box-shadow: 0 0 10px rgb(100, 100, 100, 0.5) inset;
+    background-color: rgba(150, 150, 150, 0.25);
+}
+
+input[type=button]:nth-of-type(5),
+input[type=button]:nth-of-type(2),
+input[type=button]:nth-of-type(3),
+input[type=button]:nth-of-type(4) {
+    background-color: rgba(206, 206, 206);
+}
+input[type=button]:nth-of-type(1) {background-color: red;}
+
+input[type=button]:nth-of-type(16) {
+    border-bottom-left-radius: 10px;
+}
+input[type=button]:nth-of-type(9) {
+    grid-row: 3/7;
+    grid-column-start: 4;
+    border-bottom-right-radius: 10px;
+    background-image: linear-gradient(to top, rgb(255, 123, 0, .5), rgb(255, 140, 0, .35));
+}
+
+/* ============================================= */
+
+@media only screen and (max-width: 450px) {
+    div.calc {height: 120vmin;}
+}
