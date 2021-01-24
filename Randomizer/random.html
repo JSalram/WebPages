@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Randomizer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://img.icons8.com/officel/16/000000/roulette.png">
-    <script src="main.js"></script>
-</head>
-<body>
-    <h1>Randomizer</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Randomizer</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="https://img.icons8.com/officel/16/000000/roulette.png" />
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <h1>Randomizer</h1>
 
-    <img src="img/info.png" alt="info" onclick="info()" width="1024" height="1024">
-    
-    <div id="centro">
-        <div id="left">
-            <div id="inputs">
-                <p>Elige los números seleccionados:</p>
-                <label for="n1">Número 1:</label>
-                <input type="number" id="n1" min="1">
-                <br>
-                <label for="n2">Número 2:</label>
-                <input type="number" id="n2" min="1">
-                <br>
-                <button onclick="selRandoms()">Seleccionar</button>
-            </div>
-            <div id="cells">
-                <p>Elige el número de celdas:</p>
-                <div id="celdas">
-                    <button onclick="celdas(14)">15</button>
-                    <button onclick="celdas(19)">20</button>
-                    <button onclick="celdas(24)">25</button>
-                    <button onclick="celdas(29)">30</button>
+        <img src="img/info.png" alt="info" onclick="info()" width="1024" height="1024" />
+
+        <div id="centro">
+            <div id="left">
+                <div id="inputs">
+                    <p>Elige los números seleccionados:</p>
+                    <label for="n1">Número 1:</label>
+                    <input type="number" id="n1" min="1" />
+                    <br />
+                    <label for="n2">Número 2:</label>
+                    <input type="number" id="n2" min="1" />
+                    <br />
+                    <button onclick="selRandoms()">Seleccionar</button>
                 </div>
+                <div id="cells">
+                    <p>Elige el número de celdas:</p>
+                    <div id="celdas">
+                        <button onclick="celdas(14)">15</button>
+                        <button onclick="celdas(19)">20</button>
+                        <button onclick="celdas(24)">25</button>
+                        <button onclick="celdas(29)">30</button>
+                    </div>
+                </div>
+                <img src="img/random.png" alt="random" onclick="randomN()" width="980" height="876" />
             </div>
-            <img src="img/random.png" alt="random" onclick="randomN()" width="980" height="876">
+            <div id="botonera"></div>
+            <p id="restantes"></p>
         </div>
-        <div id="botonera"></div>
-        <p id="restantes"></p>
-    </div>
-</body>
+    </body>
 </html>

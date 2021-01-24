@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: black;
+    h1 {
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+nav {
+    margin: 30px;
+    display: flex;
+    p {
+        text-align: justify;
+        margin: 10px;
+    }
+}

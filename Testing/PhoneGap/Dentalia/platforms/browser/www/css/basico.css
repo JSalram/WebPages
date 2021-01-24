@@ -1,0 +1,135 @@
+nav.navbar {
+  background: #023047;
+}
+
+nav.navbar li a.btn {
+  color: white;
+  background: #fb8500;
+  margin-left: 10px;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+nav.navbar li a.btn:hover {
+  background: #000;
+}
+
+nav.navbar li a.active {
+  pointer-events: none;
+}
+
+nav.navbar li a.active.btn {
+  color: white;
+  background: black;
+}
+
+@media (min-width: 768px) {
+  nav.navbar li a:not(.btn):hover {
+    border-bottom: lightgray 1px solid;
+  }
+  nav.navbar li a.active:not(.btn) {
+    border-bottom: #fb8500 1px solid;
+  }
+}
+
+@media (max-width: 768px) {
+  nav.navbar li {
+    text-align: center;
+  }
+  nav.navbar li a.btn {
+    display: block;
+  }
+}
+
+footer {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ffb703), to(#fb8500));
+  background: linear-gradient(to bottom right, #ffb703, #fb8500);
+}
+
+footer h5 {
+  color: #023047;
+}
+
+footer img {
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
+}
+
+footer a {
+  color: #212529;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+footer .row
+{
+  margin-bottom: 0;
+}
+
+.btnScrollTop
+{
+  font-size: 25px;
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #023047;
+  color: white;
+  box-shadow: 0 6px 5px grey;
+  cursor: pointer;
+  border: none;
+  transition: all .2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.btnScrollTop:hover
+{
+  background-color: #219EBC;
+}
+
+.btnScrollTop:active
+{
+  background-color: #126782;
+  box-shadow: 0 4px 5px black;
+  transform: translateY(2px);
+}
+
+.btnScrollTopHide
+{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btnScrollTopShow
+{
+  opacity: 1;
+  pointer-events: all;
+  animation-name: btnScrollTopMove;
+  animation-duration: 1s;
+}
+
+@keyframes btnScrollTopMove
+{
+  from
+  {
+    right: 20px;
+    bottom: 0px;
+    background-color: #219EBC;
+  }
+
+  to
+  {
+    right: 20px;
+    bottom: 40px;
+    background-color: #023047;
+  }
+}

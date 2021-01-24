@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadenas</title>
+</head>
+<body>
+    <h1>Cadenas en JS</h1>
+    <script type="text/javascript">
+    
+    const nombre = "Javi"
+    const frase = "El caballo blanco de Santiago"
+    const texto = "      texto       "
+    const coord = "12324.23,-242123.21,7242.62"
+
+    //template literals
+    console.log(`Hola ${nombre}`)
+
+    //length
+    console.log(`Longitud de ${nombre}: ` + nombre.length)
+    console.log("Longitud de $frase: " + frase.length)
+
+    //.includes()
+    console.log(`Saber si ${nombre} contiene "Ja": ` + nombre.includes("Ja"))
+    
+    //.slice(start, end)
+    console.log("Substring de $frase: " + frase.slice(3, 10))
+
+    //.replace("este texto", "por este otro")
+    console.log("Reemplazar blanco por negro: " + frase.replace("blanco", "negro"))
+
+    //.trim()
+    console.log("Eliminar espacios sobrantes (izq y der): " + texto.trim())
+
+    //.split(',')
+    console.log("Array de coordenadas:")
+    console.log(coord.split(','))
+
+    </script>
+</body>
+</html>
